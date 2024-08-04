@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import DimentionAPI from './components/DimentionAPI';
 
 export class App extends Component {
   render() {
     return (
       <View>
-        <Component1 />
+        {/* <Component1 /> */}
+        {/* <Layouts /> */}
+        <DimentionAPI />
       </View>
     );
   }
@@ -13,7 +16,13 @@ export class App extends Component {
 
 const Component1 = () => {
   return (
-    <View style={[styles.viewStyle, styles.commonStyle, styles.boxShadow, styles.androidShadow]}>
+    <View
+      style={[
+        styles.viewStyle,
+        styles.commonStyle,
+        styles.boxShadow,
+        styles.androidShadow,
+      ]}>
       <Text style={[styles.textStyle, styles.commonStyle]}>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, maxime!
       </Text>
@@ -28,9 +37,9 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#ff0000',
     backgroundColor: '#ffaa00',
-    padding:10,
-    margin:20,
-    borderRadius:6
+    padding: 10,
+    margin: 20,
+    borderRadius: 6,
   },
   textStyle: {
     color: '#ffffff',
@@ -47,9 +56,9 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   // for android
-  androidShadow:{
-    elevation: 10
-  }
+  androidShadow: {
+    elevation: 10,
+  },
 });
 
 export default App;
